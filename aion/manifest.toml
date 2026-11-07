@@ -1,0 +1,45 @@
+schema_version = 1
+distribution_name = "AION BSD Edition"
+distribution_id = "aion-bsd"
+release_track = "development"
+source_project = "GhostBSD / FreeBSD"
+source_repository = "https://github.com/ghostbsd/ghostbsd-src"
+source_fork = "https://github.com/mondubyrd-blip/phantomAionbsd"
+source_branch = "stable/15"
+
+[build]
+status = "planning"
+target_architectures = ["amd64"]
+image_builder = "ghostbsd-build"
+image_builder_status = "compatibility_not_yet_verified"
+kernel_fork_required = false
+
+[defaults]
+offline_first = true
+network_services_opt_in = true
+desktop_profile = "undecided"
+filesystem = "zfs"
+installer = "undecided"
+
+[components.identity_core]
+status = "interface_design_pending"
+package = "aion-identity"
+
+[components.cognitive_core]
+status = "interface_design_pending"
+package = "aion-cognitive"
+
+[components.memory_core]
+status = "interface_design_pending"
+package = "aion-memory"
+
+[components.orchestration_layer]
+status = "interface_design_pending"
+package = "aion-orchestrator"
+
+[validation]
+iso_built = false
+boot_tested = false
+installer_tested = false
+offline_tested = false
+security_reviewed = false
